@@ -111,7 +111,7 @@ public class UserControllerTest {
     }
 
     @Test
-    public void listAllUsers() {
+    public void listAllUsers() throws Exception{
         String apiUrl = "/users/users";
 
         Mockito.when(userService.findAll())
@@ -120,7 +120,6 @@ public class UserControllerTest {
         RequestBuilder rb = MockMvcRequestBuilders.get(apiUrl)
                 .accept(MediaType.APPLICATION_JSON);
 
-        // the following actually performs a real controller call
         MvcResult r = mockMvc.perform(rb)
                 .andReturn(); // this could throw an exception
         String tr = r.getResponse()
