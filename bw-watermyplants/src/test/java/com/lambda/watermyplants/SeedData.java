@@ -1,8 +1,10 @@
 package com.lambda.watermyplants;
 
+import com.lambda.watermyplants.models.Plant;
 import com.lambda.watermyplants.models.Role;
 import com.lambda.watermyplants.models.User;
 import com.lambda.watermyplants.models.UserRoles;
+import com.lambda.watermyplants.services.PlantService;
 import com.lambda.watermyplants.services.RoleService;
 import com.lambda.watermyplants.services.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -26,6 +28,9 @@ public class SeedData implements CommandLineRunner
      */
     @Autowired
     UserService userService;
+
+    @Autowired
+    PlantService plantService;
 
     /**
      * Generates test, seed data for our application
@@ -75,5 +80,15 @@ public class SeedData implements CommandLineRunner
         User u5 = new User("Test misskitty", "password", "misskitty@school.lambda", "asd");
         u5.getRoles().add(new UserRoles(u5, r2));
         userService.save(u5);
+
+        // plants
+
+        Plant p1 = new Plant("Violet", "Daisy", "backporch", "njk", u1);
+        plantService.save(p1);
+
+        Plant p2 = new Plant("Robby the plant", "roses", "sink", "daily", u2);
+        plantService.save(p2);
+
+
     }
 }

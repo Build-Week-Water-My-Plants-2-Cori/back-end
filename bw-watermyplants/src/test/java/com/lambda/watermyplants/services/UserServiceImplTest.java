@@ -2,6 +2,9 @@ package com.lambda.watermyplants.services;
 
 import com.lambda.watermyplants.WaterMyPlantsBwApplication;
 import com.lambda.watermyplants.exceptions.ResourceNotFoundException;
+import com.lambda.watermyplants.models.Role;
+import com.lambda.watermyplants.models.User;
+import com.lambda.watermyplants.models.UserRoles;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
@@ -53,15 +56,6 @@ public class UserServiceImplTest {
     public void delete() {
         userService.delete(8);
         assertEquals(4, userService.findAll().size());
-    }
-
-    @Test
-    public void findByName() {
-        assertEquals("admin", userService.findByName("admin"));
-    }
-
-    @Test
-    public void save() {
     }
 
     @Test
