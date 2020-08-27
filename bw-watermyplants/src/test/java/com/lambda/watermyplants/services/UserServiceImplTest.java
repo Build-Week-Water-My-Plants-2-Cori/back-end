@@ -44,7 +44,7 @@ public class UserServiceImplTest {
 
     @Test
     public void findByNameContaining() {
-        assertEquals(4, userService.findByNameContaining("a").size());
+        assertEquals(3, userService.findByNameContaining("a").size());
     }
 
     @Test

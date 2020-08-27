@@ -56,38 +56,38 @@ public class SeedData implements CommandLineRunner
         r3 = roleService.save(r3);
 
         // admin, data, user
-        User u1 = new User("admin", "password", "admin@lambdaschool.local", "123-456-7890");
+        User u1 = new User("test admin", "password", "admin@lambdaschool.local", "123-456-7890");
         u1.getRoles().add(new UserRoles(u1, r1));
         u1.getRoles().add(new UserRoles(u1, r2));
         u1.getRoles().add(new UserRoles(u1, r3));
         userService.save(u1);
 
         // data, user
-        User u2 = new User("Test cinnamon", "1234567", "cinnamon@lambdaschool.local", "098-765-5432");
+        User u2 = new User("test billy", "1234567", "cinnamon@lambdaschool.local", "098-765-5432");
         u2.getRoles().add(new UserRoles(u2, r2));
         u2.getRoles().add(new UserRoles(u2, r3));
         userService.save(u2);
 
         // user
-        User u3 = new User("Test barnbarn", "ILuvM4th!", "barnbarn@lambdaschool.local", "dsad");
+        User u3 = new User("test adrian!!!", "ILuvM4th!", "barnbarn@lambdaschool.local", "dsad");
         u3.getRoles().add(new UserRoles(u3, r2));
         userService.save(u3);
 
-        User u4 = new User("Test puttat", "password", "puttat@school.lambda", "fds");
+        User u4 = new User("test bobby", "password", "puttat@school.lambda", "fds");
         u4.getRoles().add(new UserRoles(u4, r2));
         userService.save(u4);
 
-        User u5 = new User("Test misskitty", "password", "misskitty@school.lambda", "asd");
+        User u5 = new User("test myname", "password", "misskitty@school.lambda", "asd");
         u5.getRoles().add(new UserRoles(u5, r2));
         userService.save(u5);
 
-        // plants
-
-        Plant p1 = new Plant("Violet", "Daisy", "backporch", "njk", u1);
-        plantService.save(p1);
-
-        Plant p2 = new Plant("Robby the plant", "roses", "sink", "daily", u2);
-        plantService.save(p2);
+//        // plants
+//
+//        Plant p1 = new Plant("Violet", "Daisy", "backporch", "njk", u1);
+//        plantService.save(p1);
+//
+//        Plant p2 = new Plant("Robby the plant", "roses", "sink", "daily", u2);
+//        plantService.save(p2);
 
 
     }
