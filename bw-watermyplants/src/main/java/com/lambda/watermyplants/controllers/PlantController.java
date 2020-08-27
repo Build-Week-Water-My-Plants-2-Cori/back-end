@@ -30,6 +30,12 @@ public class PlantController {
         return new ResponseEntity<>(userPlants, HttpStatus.OK);
     }
 
+    @GetMapping(value = "/plants", produces = "application/json")
+    public ResponseEntity<?> getAllPlants() {
+        List<Plant> listPlants = plantService.findAllPlants();
+        return new ResponseEntity<>(listPlants, HttpStatus.OK);
+    }
+
     @PostMapping(value = "/{userID}", consumes = "application/json")
     public ResponseEntity<?> saveNewPlant(
             HttpServletRequest request,

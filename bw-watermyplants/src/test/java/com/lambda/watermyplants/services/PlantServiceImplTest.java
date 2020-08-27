@@ -30,7 +30,7 @@ public class PlantServiceImplTest {
 
     @Test
     public void findAllPlantsByUserID() {
-        assertEquals("", plantservice.findAllPlantsByUserID(1));
+        assertEquals(1, plantservice.findAllPlantsByUserID(1).size());
     }
 
     @Test

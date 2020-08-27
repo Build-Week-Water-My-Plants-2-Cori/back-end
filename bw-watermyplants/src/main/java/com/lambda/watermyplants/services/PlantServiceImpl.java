@@ -30,6 +30,12 @@ public class PlantServiceImpl implements PlantService {
         return plantList;
     }
 
+    @Override
+    public List<Plant> findAllPlants() {
+        List<Plant> newList = (List<Plant>) plantrepos.findAll();
+        return newList;
+    }
+
     @Transactional
     @Override
     public Plant savePlant(long userID, Plant newPlant) {

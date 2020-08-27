@@ -13,4 +13,5 @@ public interface PlantService {
     Plant savePlant(long userID, Plant newPlant);
     Plant updatePlant(Plant plant, long plantid);
     void delete(long id);
+    List<Plant> findAllPlants();
 }
