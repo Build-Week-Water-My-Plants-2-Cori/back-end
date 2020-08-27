@@ -11,6 +11,7 @@ Endpoints ->
 | GET     | /users/{userid}   | Get User by id              |
 | PUT     | /users/{userid}   | Update User by id           |
 | GET     | /plants/{userid}  | Get all Plants by Userid    |
+| GET     | /plants/plants    | Get all Plants              |
 | PUT     | /plants/{plantid} | Edit Plant by Plantid       |
 | POST    | /plants/{userid}  | Save New Plant by Userid    |
 | DELETE  | /plants/{plantid} | Delete by Plant by id       |
